@@ -1,0 +1,13 @@
+This are known bugs of the parser that should be fixed but are not easy to fix or reproduce:
+
+- unexpected EOF error when parsing automatix.py which shouldn't have a newline at the end of the file for this (or test_runner.py)
+	Or use 
+"def a():
+	i=1
+	j=i"
+
+- parser fails ...when no newline is found at end of File.[ a file should end with a newline]
+
+- crash/Assert On editing a small file the one described above. try put a newline before def a().[ Fixed ]
+
+- crash sometimes On editing a file while a DUChain viewer is displaying the contexts.

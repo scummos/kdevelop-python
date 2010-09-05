@@ -1,0 +1,10 @@
+/home/sven/projects/kde4/python/build/parser/CMakeFiles/debuginfo.dir
+/home/sven/projects/kde4/python/build/duchain/CMakeFiles/kdev4pythonduchain.dir
+/home/sven/projects/kde4/python/build/duchain/CMakeFiles/kdev4pythonduchain_automoc.dir
+/home/sven/projects/kde4/python/build/parser/CMakeFiles/kdev4pythonparser.dir
+/home/sven/projects/kde4/python/build/parser/CMakeFiles/kdev4pythonparser_automoc.dir
+/home/sven/projects/kde4/python/build/CMakeFiles/kdevpythonlanguagesupport.dir
+/home/sven/projects/kde4/python/build/CMakeFiles/kdevpythonlanguagesupport_automoc.dir
+/home/sven/projects/kde4/python/build/parser/CMakeFiles/python-parser.dir
+/home/sven/projects/kde4/python/build/parser/CMakeFiles/python-parser_automoc.dir
+/home/sven/projects/kde4/python/build/CMakeFiles/uninstall.dir

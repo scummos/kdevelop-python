@@ -155,7 +155,6 @@ void ParseJob::run()
             parsingEnvironmentFile->setModificationRevision(contents().modification);
             DUChain::self()->updateContextEnvironment(m_duContext, parsingEnvironmentFile.data());
             //m_duContext->clearProblems();
-            qDebug() << "cleaning problems kiko";
         }
         
         UseBuilder usebuilder( &editor );
@@ -187,7 +186,7 @@ void ParseJob::run()
         {
             m_duContext->parsingEnvironmentFile()->clearModificationRevisions();
             m_duContext->parsingEnvironmentFile()->setModificationRevision(contents().modification);
-           // m_duContext->clearProblems();
+            m_duContext->clearProblems();
             DUChain::self()->updateContextEnvironment(m_duContext, m_duContext->parsingEnvironmentFile().data());
         }
 

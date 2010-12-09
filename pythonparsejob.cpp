@@ -139,7 +139,7 @@ void ParseJob::run()
 //         printer.visitCode( m_ast );
         if ( abortRequested() )
             return abortJob();
-
+        
         PythonEditorIntegrator editor;
         DeclarationBuilder builder( &editor );
         
@@ -148,13 +148,14 @@ void ParseJob::run()
         m_duContext = builder.build(filename, m_ast);
         setDuChain(m_duContext);
         
-        {
+         {
             DUChainWriteLocker lock(DUChain::lock());
             ParsingEnvironmentFilePointer parsingEnvironmentFile = m_duContext->parsingEnvironmentFile();
             parsingEnvironmentFile->clearModificationRevisions();
             parsingEnvironmentFile->setModificationRevision(contents().modification);
             DUChain::self()->updateContextEnvironment(m_duContext, parsingEnvironmentFile.data());
-            m_duContext->clearProblems();
+            //m_duContext->clearProblems();
+            qDebug() << "cleaning problems kiko";
         }
         
         UseBuilder usebuilder( &editor );
@@ -186,7 +187,7 @@ void ParseJob::run()
         {
             m_duContext->parsingEnvironmentFile()->clearModificationRevisions();
             m_duContext->parsingEnvironmentFile()->setModificationRevision(contents().modification);
-            m_duContext->clearProblems();
+           // m_duContext->clearProblems();
             DUChain::self()->updateContextEnvironment(m_duContext, m_duContext->parsingEnvironmentFile().data());
         }
 
